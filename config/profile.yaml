@@ -1,0 +1,167 @@
+salary:
+  floor: 50271
+  target: 55000
+
+# A job must pass this gate to be included at all - separate from keywords.* below,
+# which only affect ranking among roles that already passed. Keeps out Business
+# Analyst / Product Manager / Recruitment Consultant / non-software "Engineer" titles
+# (Materials Engineer, Project Engineer, "Performance Standards Engineer (Water)", etc.)
+# that job boards mix in under "IT"/"tech" categories.
+#
+# A title passes if EITHER:
+#   - it contains one of titleMustMatchAny as a phrase (e.g. "developer", "devops"), OR
+#   - it contains the word "engineer" AND at least one of engineerQualifiers
+#     (so "React Engineer" and "Lead Systems Engineer" pass, but a bare
+#     "Materials Engineer" or "Project Engineer" does not).
+roleFilter:
+  titleMustMatchAny:
+    - "software engineer"
+    - "software developer"
+    - developer
+    - programmer
+    - "full stack"
+    - "full-stack"
+    - "front end"
+    - "front-end"
+    - frontend
+    - "back end"
+    - "back-end"
+    - backend
+    - devops
+    - "site reliability"
+    - sre
+    - "tech lead"
+    - "technical lead"
+    - "engineering manager"
+    - "software architect"
+    - "solutions architect"
+    - "technical architect"
+    - "web developer"
+  engineerQualifiers:
+    - platform
+    - data
+    - cloud
+    - systems
+    - solutions
+    - application
+    - mobile
+    - qa
+    - test
+    - security
+    - infrastructure
+    - release
+    - build
+    - firmware
+    - embedded
+    - integrations
+    - automation
+    - web
+    - ios
+    - android
+    - api
+    - network
+    - kubernetes
+    - "machine learning"
+    - " ml "
+    - " ai "
+    - react
+    - node
+    - python
+    - java
+    - javascript
+    - typescript
+    - ruby
+    - golang
+    - kotlin
+    - swift
+    - ".net"
+    - php
+    - rust
+    - scala
+    - staff
+    - principal
+    - site
+    - reliability
+    - sre
+
+keywords:
+  strong:
+    - react native
+    - react
+    - typescript
+    - node.js
+    - node
+    - full stack
+    - full-stack
+    - mobile engineer
+    - senior software engineer
+    - lead engineer
+  medium:
+    - javascript
+    - electron
+    - kotlin
+    - android
+    - aws
+    - digital health
+    - healthtech
+    - fintech
+    - python
+    - fastapi
+  negative:
+    - graduate
+    - junior
+    - intern
+    - apprentice
+    - internship
+    - placement
+    - "security clearance"
+    - "sc clearance"
+    - "dv clearance"
+    - ".net only"
+    - "c# developer"
+    - salesforce
+    - sap
+
+locations:
+  include:
+    - nottingham
+    - derby
+    - leicester
+    - birmingham
+    - sheffield
+    - leeds
+    - manchester
+    - london
+    - remote
+    - "united kingdom"
+    - uk
+  remote_ok: true
+
+seniority:
+  prefer:
+    - senior
+    - lead
+    - staff
+    - principal
+
+sponsorPhrases:
+  negative:
+    - "no sponsorship"
+    - "unable to sponsor"
+    - "cannot sponsor"
+    - "not able to offer sponsorship"
+    - "must have the right to work"
+    - "no visa sponsorship"
+    - "does not offer sponsorship"
+    - "sponsorship is not available"
+  positive:
+    - "visa sponsorship available"
+    - "we can sponsor"
+    - "skilled worker visa"
+
+scoring:
+  titleKeywordWeight: 3
+  descriptionKeywordWeight: 1
+  seniorityBonus: 5
+  locationMatchBonus: 2
+  negativeHitPenalty: 100

@@ -1,0 +1,32 @@
+{
+  "total": 12,
+  "jobPostings": [
+    {
+      "title": "Professional Business Support Administrator",
+      "externalPath": "/job/London/Professional-Business-Support-Administrator_JR0022745-1",
+      "locationsText": "3 Locations",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR0022745"
+      ]
+    },
+    {
+      "title": "Head of Department - Listings",
+      "externalPath": "/job/London/Head-of-Department---Listings_JR0022774-2",
+      "locationsText": "London",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR0022774"
+      ]
+    },
+    {
+      "title": "Crisis Management Specialist",
+      "externalPath": "/job/London/Crisis-Management-Specialist_JR0022587-1",
+      "locationsText": "3 Locations",
+      "postedOn": "Posted Yesterday",
+      "bulletFields": [
+        "JR0022587"
+      ]
+    }
+  ]
+}

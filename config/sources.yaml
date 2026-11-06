@@ -1,0 +1,40 @@
+# Enable/disable sources and set per-source options.
+sources:
+  sponsorRegister:
+    enabled: true
+  ats:
+    enabled: true
+  # Job boards that aggregate postings from many sponsor-willing employers,
+  # rather than one company at a time (see companies.yaml for the latter).
+  huntUkVisaSponsors:
+    enabled: true
+  jobsAcUk:
+    enabled: true
+  nhsJobs:
+    enabled: true
+  # landed.jobs explicitly cross-references the Home Office sponsor register per
+  # company ("UK register, <date>" badge). nextLevelJobs is a small curated list of
+  # ~16-18 elite employers (Google/DeepMind, Anthropic, OpenAI, Stripe, Cloudflare...)
+  # known to sponsor - low volume but high quality.
+  landedJobs:
+    enabled: true
+  nextLevelJobs:
+    enabled: true
+  # society-rse.org: niche but high-signal board for Research Software Engineer
+  # roles at UK universities/institutes - small volume, strong relevance.
+  societyRse:
+    enabled: true
+  # Not built: Civil Service Jobs and hiring.cafe actively block automated requests
+  # with a bot challenge page even though robots.txt mostly says Allow - see SPEC.md
+  # ground rules (don't work around a source that's disallowing automated access).
+  # Also skipped: Reed and Adzuna (generic UK job boards, no sponsorship signal, same
+  # reasoning the spec used to exclude Indeed/LinkedIn/Glassdoor) and ukstartupjobs.com's
+  # "visa-sponsorship" tag (checked - every listing on it is expired/dead).
+  # Removed 2026-11-06: visasponsor.jobs's "apply" links mostly bounced to stale/old
+  # LinkedIn posts rather than live postings - low enough quality to not be worth it.
+
+politeness:
+  userAgent: "SponsorScout/1.0 (personal job search tool)"
+  maxRequestsPerSecondPerHost: 1
+  timeoutMs: 15000
+  retries: 2

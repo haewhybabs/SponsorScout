@@ -1,0 +1,14 @@
+node_modules/
+dist/
+data/
+reports/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+# Your real CV has personal details in it - keep it out of version control.
+config/cv.md
+# Local Claude Code session state (permission allowlist, scheduler lock) - machine/session
+# specific, not part of the project.
+.claude/

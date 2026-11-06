@@ -1,0 +1,199 @@
+# Company careers sources via ATS APIs.
+# ats: greenhouse | lever | ashby | workable | smartrecruiters | teamtailor
+# slug: the identifier used in that ATS's public API URL.
+# Verified live against the real endpoints on 2026-11-04 (see §5 of SPEC.md).
+# Note: the Greenhouse slug "wise" belongs to an unrelated US company ("Wise
+# Worksite Field Sales"), not the fintech Wise.com - Wise.com actually runs on
+# SmartRecruiters (company id "Wise"), which is a Phase 2 adapter. Swapped for
+# Trustpilot here; revisit Wise via SmartRecruiters once that adapter exists.
+companies:
+  - name: Monzo
+    ats: greenhouse
+    slug: monzo
+  - name: Deliveroo
+    ats: greenhouse
+    slug: deliveroo
+  - name: GoCardless
+    ats: greenhouse
+    slug: gocardless
+  - name: Trustpilot
+    ats: greenhouse
+    slug: trustpilot
+  - name: Zopa
+    ats: lever
+    slug: zopa
+  - name: Duffel
+    ats: lever
+    slug: duffel
+  - name: TrueLayer
+    ats: ashby
+    slug: truelayer
+  - name: Paddle
+    ats: ashby
+    slug: paddle
+  - name: Synthesia
+    ats: ashby
+    slug: synthesia
+
+  # Added 2026-11-05: verified live (job count + UK-location sample) against each
+  # endpoint, and cross-checked employer names against the Home Office register
+  # where a confident match was findable. A handful have no obvious register match
+  # under the names tried here - that's fine, the runtime sponsor matcher will show
+  # those as "unclear" rather than "likely", which is the correct, honest outcome.
+  - name: Tide
+    ats: greenhouse
+    slug: tide
+  - name: Liberis
+    ats: greenhouse
+    slug: liberis
+  - name: Graphcore
+    ats: greenhouse
+    slug: graphcore
+  - name: Speechmatics
+    ats: greenhouse
+    slug: speechmatics
+  - name: HelloFresh
+    ats: greenhouse
+    slug: hellofresh
+  - name: Butternut Box
+    ats: greenhouse
+    slug: butternutbox
+  - name: THG
+    ats: greenhouse
+    slug: thehutgroup
+  - name: Bloomreach
+    ats: greenhouse
+    slug: bloomreach
+  - name: Mind Foundry
+    ats: greenhouse
+    slug: mindfoundry
+  - name: Appinio
+    ats: greenhouse
+    slug: appinio
+  - name: Auto Trader
+    ats: greenhouse
+    slug: autotrader
+  - name: Thought Machine
+    ats: ashby
+    slug: thought-machine
+  - name: Codat
+    ats: ashby
+    slug: codat
+  - name: Freetrade
+    ats: ashby
+    slug: freetrade
+  - name: ClearBank
+    ats: ashby
+    slug: clearbank
+  - name: Griffin
+    ats: ashby
+    slug: griffin
+  - name: OakNorth
+    ats: ashby
+    slug: oaknorth
+  - name: Funding Circle
+    ats: ashby
+    slug: fundingcircle
+  - name: Wayve
+    ats: ashby
+    slug: wayve
+  - name: Snyk
+    ats: ashby
+    slug: snyk
+  - name: Immersive Labs
+    ats: ashby
+    slug: immersivelabs
+  - name: Trading 212
+    ats: ashby
+    slug: trading212
+  - name: Multiverse
+    ats: ashby
+    slug: multiverse
+  - name: Juro
+    ats: ashby
+    slug: juro
+  - name: Lendable
+    ats: ashby
+    slug: lendable
+  - name: Ogury
+    ats: ashby
+    slug: ogury
+  - name: Moneybox
+    ats: ashby
+    slug: moneybox
+  - name: Quantexa
+    ats: ashby
+    slug: quantexa
+  - name: Preply
+    ats: ashby
+    slug: preply
+  - name: Farfetch
+    ats: ashby
+    slug: farfetch
+  - name: Flagstone
+    ats: ashby
+    slug: flagstone
+  - name: Elliptic
+    ats: ashby
+    slug: elliptic
+  - name: Aveni
+    ats: ashby
+    slug: aveni
+  - name: Zego
+    ats: ashby
+    slug: zego
+  - name: GetGround
+    ats: ashby
+    slug: getground
+  - name: Carwow
+    ats: ashby
+    slug: carwow
+  - name: Trainline
+    ats: ashby
+    slug: trainline
+
+  # Added 2026-11-05: regulators/central bank - legally separate from core Civil
+  # Service (not subject to its UK/Commonwealth-nationality eligibility rule), and
+  # known Skilled Worker sponsors. Structured, non-leetcode interview process.
+  - name: Financial Conduct Authority
+    ats: workday
+    slug: "fca:3:FCA_Careers"
+  - name: Ofcom
+    ats: workday
+    slug: "ofcom:3:Ofcom_Careers"
+  - name: NESO
+    ats: workday
+    slug: "neso:103:Careers"
+
+  # Added 2026-11-06: large non-tech UK sponsors with real internal engineering teams -
+  # the user's idea was to look beyond pure tech/fintech companies, broadened to any large
+  # UK sponsor. searchTerms scopes the Workday query server-side rather than fetching every
+  # global posting (GSK alone has ~978 total postings worldwide, most not UK/not engineering).
+  - name: John Lewis Partnership
+    ats: workday
+    slug: "jlp:3:JLPjobs_careers"
+    searchTerms: ["software engineer", "software developer"]
+  - name: Lloyds Banking Group
+    ats: workday
+    slug: "lbg:3:LBG_Careers"
+    searchTerms: ["software engineer", "software developer"]
+  - name: GSK
+    ats: workday
+    slug: "gsk:5:GSKCareers"
+    searchTerms: ["software engineer", "software developer"]
+  - name: Shell
+    ats: workday
+    slug: "shell:3:ShellCareers"
+    searchTerms: ["software engineer", "software developer"]
+  - name: Rolls-Royce
+    ats: workday
+    slug: "rollsroyce:3:professional"
+    searchTerms: ["software engineer", "software developer"]
+  - name: Barclays
+    ats: workday
+    slug: "barclays:3:External_Career_Site_Barclays"
+    searchTerms: ["software engineer", "software developer"]
+  - name: AstraZeneca
+    ats: workday
+    slug: "astrazeneca:3:Careers"
+    searchTerms: ["software engineer", "software developer"]
